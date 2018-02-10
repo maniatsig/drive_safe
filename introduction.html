@@ -1,0 +1,169 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+    	<title>DRIVE SAFE</title>
+    	<meta charset="UTF-8">
+	    
+		
+    	<link rel="stylesheet" href="my.css" type="text/css">
+	</head>
+	<script>
+	
+
+			i=1;
+			text_y=80;
+			
+			button=new Image();
+			button.src="\images/butnext.png";
+			arrowl=new Image();
+			arrowl.src="\images/arrowl.png";
+			arrowd=new Image();
+			arrowd.src="\images/arrowd.png";
+			arrowr=new Image();
+			arrowr.src="\images/arrowr.png";			
+			function getMousePos(canvas, evt)
+				{
+					var rect = canvas.getBoundingClientRect();
+					return {
+					  x: evt.clientX - rect.left,
+					  y: evt.clientY - rect.top
+					};
+			    }
+				
+				
+			function start()
+			{
+				var canvas = document.getElementById('canvas_intro');
+				var context = canvas.getContext('2d');
+				context.clearRect(0, 0, canvas.width, canvas.height);
+				
+				if(i==1)
+				{
+					
+					
+					context.drawImage(arrowl,130,300,arrowl.width,arrowl.height);
+					context.drawImage(button,690,170,button.width,button.height);
+					context.font="20px Calibri";
+					context.fillText("  Καλωσήρθατε στο DRIVE SAFE!",260,text_y);
+					context.fillText("  Αυτός είναι ο Θοδωρής και θα είναι ο προσωπικός σας",260,text_y+28);
+					context.fillText("  βοηθός κατα τη διάρκεια της εξέλιξης του παιχνιδιού",260,text_y+56);
+					context.fillText("  δίνοντάς σας οδηγίες και χρησιμες πληροφορίες!",260,text_y+84);
+				}
+				
+				
+				
+				canvas.addEventListener('click', function(evt) 
+				{
+					
+					var mousePos = getMousePos(canvas, evt);
+					
+					if(mousePos.x>=690 && mousePos.x<=740 && mousePos.y>=170 && mousePos.y<=220)
+					{
+						i++;
+					}
+						if(i==2)
+						{
+							context.clearRect(0, 0, canvas.width, canvas.height);
+						
+							
+							context.drawImage(arrowd,540,330,arrowd.width,arrowd.height);
+							context.drawImage(button,690,170,button.width,button.height);
+							context.font="20px Calibri";
+							context.fillText("  Αυτό είναι το αυτοκίνητό σας.",260,text_y);
+							context.fillText("  Μπορείτε να κινείστε πατώντας το μπροστά βέλος του ",260,text_y+28);
+							context.fillText("  πληκτρολογίου σας.",260,text_y+56);
+							//context.fillText("  στη διάρκεια του παιχνιδιού μπορείτε να αντιδράσετε",260,text_y+84);
+							//context.fillText("  με τις ενέργειες που βρίσκονται στο δεξί μέρος της",260,text_y+112);
+							//context.fillText("  οθόνης.",260,text_y+140);
+						}
+						else if(i==3)
+						{
+							
+							context.clearRect(0, 0, canvas.width, canvas.height);
+							
+							context.drawImage(arrowl,150,5,arrowl.width,arrowl.height);
+							context.drawImage(button,690,170,button.width,button.height);
+							context.font="20px Calibri";
+							context.fillText("  Εδώ υπάρχουν επιλογές για έξοδο από το παιχνίδι,",260,text_y);
+							context.fillText("  σίγαση όλων των ήχων και γενικές πληροφορίες.",260,text_y+28);
+							//context.fillText("  και τέλος,παραπάνω πληροφορίες για το παιχνίδι",260,text_y+56);
+						}
+							
+						else if(i==4)
+						{
+							context.clearRect(0, 0, canvas.width, canvas.height);
+							
+							context.drawImage(arrowr,760,25,arrowr.width,arrowr.height);
+							context.drawImage(button,690,170,button.width,button.height);
+							context.font="20px Calibri";
+							context.fillText("  Αυτό είναι το ταχύμετρο σας και αποτελεί εικονική",260,text_y);
+							context.fillText("  ένδειξη της ταχύτητας του αυτοκινήτου σας σε κάθε ",260,text_y+28);
+							context.fillText("  περίπτωση.Είναι σημαντικό να το ελένχετε πριν ",260,text_y+56);
+							context.fillText("  αντιδράσετε!",260,text_y+84);
+						}
+							
+						else if(i==5)
+						{
+							context.clearRect(0, 0, canvas.width, canvas.height);
+							
+							context.drawImage(arrowr,760,230,arrowr.width,arrowr.height);
+							context.drawImage(button,690,170,button.width,button.height);
+							context.font="20px Calibri";
+							context.fillText("  Εδώ βρίσκονται οι επιλογές αντίδρασης που θα έχετε ",260,text_y);
+							context.fillText("  διαθέσιμες σε οποιαδήποτε κατάσταση προκύψει κατά  ",260,text_y+28);
+							context.fillText("  την εξέλιξη του παιχνιδιού. Κάθε φορά που σας το ζητά",260,text_y+56);
+							context.fillText("  ο Θοδωρής καλείστε να επιλέξετε μια.",260,text_y+84);
+						}
+							
+						else if(i==6)
+						{
+							context.clearRect(0, 0, canvas.width, canvas.height);
+							
+							context.drawImage(arrowr,760,370,arrowr.width,arrowr.height);
+							context.drawImage(button,690,170,button.width,button.height);
+							context.font="20px Calibri";
+							context.fillText("  'Οταν καλείστε να πάρετε μια απόφαση τοποθετήστε ",260,text_y);
+							context.fillText("  το ποντίκι σας εδώ ώστε να έχετε μια εικόνα του ",260,text_y+28);
+							context.fillText("  τι υπάρχει στον δρόμο μπροστά και πίσω σας από την ",260,text_y+56);
+							context.fillText("  οπτική γωνία του οδηγού.",260,text_y+84);
+						}
+							
+						else if(i==7)
+						{
+							context.clearRect(0, 0, canvas.width, canvas.height);
+							
+							context.drawImage(arrowr,760,500,arrowr.width,arrowr.height);
+							context.drawImage(button,690,170,button.width,button.height);
+							context.font="20px Calibri";
+							context.fillText("  Εδώ βρίσκεται ο μετρητής του σκορ που έχετε. Με κάθε",260,text_y);
+							context.fillText("  αντίδραση ο δείκτης της βενζίνης σας αυξάνεται ή ",260,text_y+28);
+							context.fillText("  μειώνεται.",260,text_y+56);
+							context.fillText("                                  Καλή Διασκέδαση!",260,text_y+110);
+						}
+							
+						else if(i==8)
+						{
+							  window.open('drive.html', '_parent');
+						}
+						
+					
+					
+					
+				
+			    }, false);
+				
+				
+			}
+	</script>
+	<body onload="start()">
+    	<div id="game_screen">
+			
+			
+			<canvas id="canvas_intro" width="1000" height="600"></canvas>
+			
+			
+		</div>
+
+
+	</body>
+</html>
