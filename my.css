@@ -1,0 +1,333 @@
+#canvas_intro
+			{
+                #border: 1px solid #333;
+				width:1000px;
+				height:600px;
+				#background-color:grey;
+				background-image:url('\images/drs.png');
+				background-repeat:no-repeat; 
+				#background-position:center middle 0em;
+        	}
+
+body
+{
+	text-align:center;
+	margin: 1em auto;
+	#vertical-align:middle;
+	height:700px;
+	background-color:#3366CC;
+	font-family:"Calibri",Georgia,Serif;
+	font-size:14px;
+	#display:middle;
+	#margin-left: auto;
+    #margin-right: auto;
+}
+
+#img
+{
+	position:relative;
+	width:200px;
+	height:200px;
+	border: 1px solid #333;
+	float:right;
+	margin-top:400px;
+	display:none;
+	
+	
+}
+#game_screen
+{
+	width:1000px;
+	height:600px;
+	#border: 1px solid #333;
+	margin: 0 auto;
+	#margin-top:2em;
+	background-color:white;
+	#display:middle;
+	
+}
+#canvas
+			{
+                #border: 1px solid #333;
+				width:700px;
+				height:600px;
+				#background-color:grey;
+				background-image:url('\images/canvas_bg.png');
+				background-repeat:no-repeat; 
+				background-position:center middle 0em;
+        	}
+#canvas_animation
+			{
+                #border: 1px solid #333;
+				width:700px;
+				height:600px;
+				#background-color:grey;
+				background-image:url('\images/canvas_bg.png');
+				background-repeat:no-repeat; 
+				background-position:center middle 0em;
+				display:none;
+        	}		
+		
+#agent
+{
+	 #border: 1px solid #333;
+	 float:left;
+	 height:600px;
+	 width:150px;
+	 background-image:url('\images/agent.png');
+	 background-repeat:no-repeat; 
+	 background-position:center bottom 0em;
+	 #padding-top:400px;
+	
+	 
+}
+
+#quit
+{
+	 height:50px;
+	 width:50px;
+	 background-image:url('\images/quit.png');
+	 margin-top:0em;
+	 float:left;
+	
+}
+
+#sound
+{
+	 height:50px;
+	 width:50px;
+	 background-image:url('\images/sound.png');
+	 margin-top:0em;
+	 margin-left:50px;
+	 margin-right:50px;
+}
+
+#help
+{
+	 #position:relative;
+	 height:50px;
+	 width:50px;
+	 background-image:url('\images/help.png');
+	 margin-top:-50px;
+	 float:right;
+}
+
+#agent_talk
+{
+	 background-image:url('\images/box.png');
+	 background-repeat:no-repeat; 
+	 background-position:center top 0em;
+	 #margin-top:100px;
+	 padding-top:2px;
+	 margin: 50px auto;
+	 #margin-left:5px;
+	 #padding-right:2px;
+	 height:200px;
+	 width:145px;
+	 text-align:left;
+	 #display:none;
+	 padding-left:6px;
+	 
+	
+}
+#agent_talk p
+{
+	 padding-left:10px;
+	 padding-right:10px;
+	 margin:12px auto;
+	 width:120px;
+	 
+	 
+}
+
+
+
+#canvas_container
+{
+	position:absolute;
+	width:700px;
+	height:600px;
+	margin-left:150px;
+}
+#speed
+{
+	#border: 1px solid #FFF;
+	# position:inherit;
+     margin-top:-1em;
+	 #padding-top:3em;
+	 #margin-bottom:300px;
+     right:0;
+	 height:150px;
+	 width:150px;
+	 background-image:url('\images/speedo.png');
+	 background-repeat:no-repeat; 
+	 background-position:center middle 0em;
+	 
+}
+#speed p
+{
+	padding-top:75px;
+	font-weight:bold;
+}
+#life
+{
+	 #border: 1px solid #333;
+	 #position:inherit;
+     #padding-bottom:0em;
+	 #margin-top:0em;
+	 #padding-top:-2em;
+	 #vertical-align:bottom;
+	 #background-image:url('\images/fuel.png');
+	 #background-repeat:no-repeat; 
+	 #background-position:center bottom 0em;
+	 bottom:0;
+     right:0;
+	 height:150px;
+	 width:150px;
+	 
+	 
+}
+#life img
+{
+	padding-top:10px;
+	font-weight:bold;
+}
+
+#life p
+{
+	padding-top:2em;
+	color:white;
+	font-weight:bold;
+}
+#right
+{
+	 #border: 1px solid #333;
+	 float:right;
+	
+	 
+	 height:600px;
+	 width:150px;
+}
+
+#options
+{
+	#border: 1px solid #333;
+	height:220px;
+	width:150px;
+	margin:0 auto;
+}
+#freno
+{
+	#border: 1px solid #333;
+	height:70px;
+	width:70px;
+	margin:0 auto;
+	background-image:url('\images/freno.png');
+	background-color:white;
+	background-repeat:no-repeat; 
+	background-position:center middle;
+	display:none;
+}
+
+#both
+{
+	#border: 1px solid #333;
+	height:70px;
+	width:70px;
+	margin:0 auto;
+	background-image:url('\images/both.png');
+	background-color:white;
+	background-repeat:no-repeat; 
+	background-position:center middle;
+	display:none;
+}
+
+#timoni
+{
+	#border: 1px solid #333;
+	height:70px;
+	width:70px;
+	background-image:url('\images/timoni.png');
+	background-color:white;
+	background-repeat:no-repeat; 
+	background-position:center middle;
+	margin:0 auto;
+	display:none;
+}
+
+#korna
+{
+	#border: 1px solid #333;
+	height:70px;
+	width:70px;
+	background-image:url('\images/korna.png');
+	background-color:white;
+	background-repeat:no-repeat; 
+	background-position:center middle;
+	margin:0 auto;
+	display:none;
+}
+#gazi
+{
+	#border: 1px solid #333;
+	height:70px;
+	width:70px;
+	background-image:url('\images/gazi.png');
+	background-color:white;
+	background-repeat:no-repeat; 
+	background-position:center middle;
+	margin:0 auto;
+	display:none;
+}
+
+#prosperasi
+{
+	#border: 1px solid #333;
+	height:70px;
+	width:70px;
+	background-image:url('\images/prosperasi.png');
+	background-color:white;
+	background-repeat:no-repeat; 
+	background-position:center middle;
+	margin:0 auto;
+	display:none;
+}
+
+#wait
+{
+	#border: 1px solid #333;
+	height:70px;
+	width:70px;
+	background-image:url('\images/wait.png');
+	background-color:white;
+	background-repeat:no-repeat; 
+	background-position:center middle;
+	margin:0 auto;
+	display:none;
+}
+#eyes_front
+{
+	background-image:url('\images/eyes1.png');
+	background-repeat:no-repeat; 
+	background-position:center middle;
+	#border: 1px solid #333;
+	height:40px;
+	width:150px;
+	margin:0 auto;
+	#margin-top:20px;
+	
+	
+}
+#eyes_back
+{
+	background-image:url('\images/eyes2.png');
+	background-repeat:no-repeat; 
+	background-position:center middle;
+	#border: 1px solid #333;
+	height:40px;
+	width:150px;
+	margin:0 auto;
+	#margin-top:20px;
+	
+	
+}
