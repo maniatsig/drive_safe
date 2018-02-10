@@ -1,0 +1,184 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+<head>
+	<title>Drive Safe</title>
+	<style>
+            body {
+            	background-image:url('images/backgr.png');
+				background-repeat:no-repeat; 
+				background-position:center top 1em;
+				background-color:#3366CC;
+				margin: 1em auto;
+				text-align:center;
+				#vertical-align:middle;
+				min-height:706px;
+				#display:middle;
+  
+				
+				}
+			p	{
+				margin-top:5em;
+				color:white;
+				font-family:"Calibri",Georgia,Serif;
+				font-size:25px;
+				weight:bold;
+				
+				}
+			
+				#play
+				{
+					
+					
+					width:170px;
+					height:300px;
+					float:left;
+					
+
+				}
+				#learn
+				{
+					
+					width:170px;
+					height:300px;
+					float:right;
+					
+
+				}
+				#container
+				{
+					margin-top:7.7em;
+					position: inherit;
+					text-align:center;
+					width:700px;
+					height:430px;
+					margin-left: auto;
+					margin-right: auto;
+					
+					display:none;
+					
+				}
+				
+				#cnvs
+				{
+					width:700px;
+					height:600px;
+					background-image:url('images/backgr.png');
+					background-repeat:no-repeat; 
+					#background-position:center top 0em;
+					#margin: 1em auto;
+				}
+				
+				#buttons
+				{
+					width:380px;
+					height:200px;
+					margin: 4em auto;
+				}
+				footer
+				{
+					
+					margin: 8em auto;
+					color:white;
+				}
+				footer a
+				{
+					font-family:"Arial",Georgia,Serif;
+					font-size:12px;
+					color:white;
+					#font-weight:bold;
+					text-decoration:none;
+				}
+
+		 </style>
+</head>
+<script type="text/javascript">
+			window.requestAnimFrame = (function(callback) {
+			return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame ||
+			function(callback) {
+			window.setTimeout(callback, 1000 / 60);
+			};
+			})();
+		car= new Image();
+		car.src="\images/car_intro.png";
+		logo= new Image();
+		logo.src="\images/logo.png";
+		//x=300;
+		//y=0;
+		
+		
+			
+			//move_func(x,y);
+				
+		
+		function move_func(xx,yy,sound_flag)
+		{
+			if(sound_flag==0)
+			{
+				
+				var sound=new Audio();
+				sound.src='sounds/start_sound.mp3';
+				setTimeout(function() 
+				{
+					sound.play();
+				},800);
+					
+			}
+			canvas = document.getElementById("cnvs");
+			context = canvas.getContext("2d");
+			context.clearRect(0, 0, 700, 600);
+			context.font="bold 20px Arial";
+			context.fillStyle = 'white';
+			context.fillText("Ξεκινήστε το πιο αναπάντεχο ταξίδι!",180,210);
+			context.drawImage(car,xx,yy,car.width,car.height);
+			context.drawImage(logo,xx-264,yy+car.height,logo.width,logo.height);	
+			requestAnimFrame(function() 
+			{
+					if(yy<25)
+						move_func(xx,yy+2,1);
+					else
+					{
+						setTimeout(function() 
+						{
+							
+							document.getElementById("cnvs").style.display = 'none';
+							document.getElementById("container").style.display = 'block';
+							
+						},1000);
+					}
+					
+					
+			});	
+		}
+		function onmo(imgid,bigimg)
+		{
+			document.getElementById(imgid).src = bigimg;
+			var sound=new Audio();
+			sound.src='sounds/button.mp3';
+			sound.play();
+		}
+		function onmout(imgid,bigimg)
+		{
+			document.getElementById(imgid).src = bigimg;
+			
+		}
+</script>
+<body onload="move_func(330,-300,0)">
+	
+	<header></header>
+	
+	<canvas id="cnvs" height="600" width="700"></canvas>
+	<div id="container">
+		<img src="images/logo.png"></img>
+		<div id="buttons">
+			<div id="play" onclick="window.open('introduction.html', '_parent')" onmouseover="onmo('playimg','images/playb.png')" onmouseout="onmout('playimg','images/play.png')" ><img id="playimg" src="images/play.png"></div>
+			<div id="learn" onclick="window.open('learn.html', '_parent')" onmouseover="onmo('learnimg','images/learnb.png')" onmouseout="onmout('learnimg','images/learn.png')"><img id="learnimg" src="images/learn.png"></div>
+		</div>
+		<footer>
+			<a href="">Σχετικά με το παιχνίδι </a>|<a href=""> Εκπαιδευτικοί στόχοι</a>
+		</footer>
+	</div>
+	
+	
+</body>
+</html>

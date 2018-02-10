@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+    	<title>DRIVE SAFE</title>
+    	<meta charset="UTF-8">
+	    <script type="text/javascript" src="drive.js"></script>
+    	<link rel="stylesheet" href="my.css" type="text/css">
+	</head>
+	<body>
+		<div id="game_screen">
+		
+		
+			<div id="agent">
+				<div id="quit" onclick="window.open('index.html', '_parent')"></div>
+				<div id="sound" onclick="stop_start_sounds()"></div>
+				<div id="help" onclick="help()"></div>
+				<div id="agent_talk"><p>Πάτα το κουμπί με το βέλος που δείχνει προς τα πάνω ( <img src="images/belos.png"></img> ) για να ξεκινήσεις. Καλό σου ταξίδι!</p></div>
+			</div>
+			
+			<div id="canvas_container">
+				<canvas id="canvas" width="700" height="600"></canvas>
+				<canvas id="canvas_animation" width="700" height="600"></canvas>
+			</div>
+			
+			<div id="right">
+				<div id="speed"></div>
+				<div id="options">
+					
+					<div id="timoni" onclick="timoni_clicked()" onmouseover="mo('timoni')" onmouseout="mout()"><img id="timoni_img" src=""></div>
+					<div id="wait" onclick="wait_clicked()" onmouseover="mo('wait')" onmouseout="mout()"><img id="wait_img" src=""></div>
+					<div id="korna" onclick="korna_clicked()" onmouseover="mo('korna')" onmouseout="mout()"><img id="korna_img" src=""></div>
+					<div id="prosperasi" onclick="prosperasi_clicked()" onmouseover="mo('prosperasi')" onmouseout="mout()"><img id="prosperasi_img" src=""></div>
+					<div id="freno" onclick="freno_clicked()" onmouseover="mo('freno')" onmouseout="mout()"><img id="freno_img" src=""></div>
+					<div id="both" onclick="both_clicked()" onmouseover="mo('both')" onmouseout="mout()"><img id="both_img" src=""></div>
+					<div id="gazi" onclick="gazi_clicked()" onmouseover="mo('gazi')" onmouseout="mout()"><img id="gazi_img" src=""></div>
+					
+				</div>
+				<div id="eyes_front" onmouseover="eyes_front_mo()" onmouseout="hide_img()"></div>
+				<div id="eyes_back" onmouseover="eyes_back_mo()" onmouseout="hide_img()"></div>
+				<div id="life"></div>
+			</div>
+			
+			<img id="img" src=""></img>
+			
+			
+		</div>
+		
+			
+
+
+	</body>
+</html>
